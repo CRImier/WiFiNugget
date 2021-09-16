@@ -90,14 +90,13 @@ counter = 0 # We'll prevent jitter from the buttons by keeping track of "off" si
 debounce = 10  # The limit for how many "off" signals we get before we assume the button is really off
 numPixels = 1  # How many pixels are attached to the nugget? If just the built in display, put 1
 pin = Pin(15, Pin.OUT)   # set GPIO15 to output to drive NeoPixels
-np = NeoPixel(pin, numPixels)   # create NeoPixel driver on GPI15 for 1 pixels
+np = NeoPixel(pin, numPixels)   # create NeoPixel driver on GPIO15 for all neopixels
 
 pressed = 0  # The value we read when a button is pressed
 green = Pin(0, Pin.IN, Pin.PULL_UP)  # down is green
 red = Pin(12, Pin.IN, Pin.PULL_UP)  # up is red
 blue = Pin(13, Pin.IN, Pin.PULL_UP)  # left is blue
 yellow = Pin(14, Pin.IN, Pin.PULL_UP)  # right is yellow
-pin = Pin(15, Pin.OUT)   # set GPIO15 to output to
 
 def writepixel(r, g, b):  # Function to write and display any value to our neopixels
     for i in range(0, numPixels):  # Loop to run over the length of however many neopixels we have
