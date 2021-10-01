@@ -11,7 +11,7 @@ Binaries &amp; source code for the Wi-Fi Nugget
 
 * Wi-Fi Deauther - See here: https://github.com/HakCat-Tech/esp8266_deauther
 
-**CircuitPython Code:**
+**CircuitPython Code:** (S2 Nugget Only, Does Not Work On ESP8266 Nugget!)
 
 * CircuitNeopixelTest.py - CircuitPython Code to test and control the neopixel on the Wi-Fi nugget. 
 
