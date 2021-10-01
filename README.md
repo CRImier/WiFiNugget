@@ -15,7 +15,7 @@ Binaries &amp; source code for the Wi-Fi Nugget
 
 **Precompiled Binaries:**
 
-* DeauthDetector.bin - Wi-Fi deauthentication & dissisociation attack detector by @AlexLynd based on @spacehuhn's deauth detector (Precompiled, flash directly with esptool)
+* DeauthDetector.bin - Wi-Fi deauthentication & dissociation attack detector by @AlexLynd based on @spacehuhn's deauth detector (Precompiled, flash directly with esptool)
 
 * esp8266-20210902-v1.17.bin - Current, working MicroPython binary to flash to the Wi-Fi Nugget as of 9/30/21 (download the latest here: https://micropython.org/download/esp8266/)
 
