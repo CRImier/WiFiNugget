@@ -13,5 +13,5 @@ Precompiled Binaries:
 
 MicroPython for the ESP8266 (download the latest here: https://micropython.org/download/esp8266/)
 
-* esp8266-20210902-v1.17.bin - Current, working MicroPython binary to flash to the Wi-Fi Nugget
+* esp8266-20210902-v1.17.bin - Current, working MicroPython binary to flash to the Wi-Fi Nugget as of 9/30/21
 
