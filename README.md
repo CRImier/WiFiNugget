@@ -20,7 +20,7 @@ Binaries &amp; source code for the Wi-Fi Nugget
 
 * esp8266-20210902-v1.17.bin - Current, working MicroPython binary to flash to the Wi-Fi Nugget as of 9/30/21 (download the latest here: https://micropython.org/download/esp8266/)
 
-The Wi-Fi Deauther V2.5 by @spacehuhn, modified for Nugget by @AlexLynd 
+* The Wi-Fi Deauther V2.5 by @spacehuhn, modified for Nugget by @AlexLynd 
 
 
 
