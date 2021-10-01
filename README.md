@@ -1,6 +1,9 @@
 # WiFiNugget
+
 Binaries &amp; source code for the Wi-Fi Nugget
+
 ![Drag Racing](https://cdn.shopify.com/s/files/1/2779/8142/products/signal-2021-09-30-162945_1024x1024.jpg?v=1633047834)
+
 
 **Arduino Code:**
 
