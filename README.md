@@ -9,6 +9,8 @@ Binaries &amp; source code for the Wi-Fi Nugget
 
 * DeauthDetector.ino - Wi-Fi deauthentication & dissisociation attack detector by @AlexLynd based on @spacehuhn's deauth detector (Source code, compile and flash in Arduino IDE)
 
+* Wi-Fi Deauther - See here: https://github.com/HakCat-Tech/esp8266_deauther
+
 **CircuitPython Code:**
 
 * CircuitNeopixelTest.py - CircuitPython Code to test and control the neopixel on the Wi-Fi nugget. 
