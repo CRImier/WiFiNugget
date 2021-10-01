@@ -7,9 +7,9 @@ Binaries &amp; source code for the Wi-Fi Nugget
 
 **Arduino Code:**
 
-* DeauthDetector.ino - Wi-Fi deauthentication & dissisociation attack detector by @AlexLynd based on @spacehuhn's deauth detector (Source code, compile and flash in Arduino IDE)
+* Wi-Fi deauthentication & dissisociation attack detector by @AlexLynd based on @spacehuhn's deauth detector (See here: https://github.com/HakCat-Tech/HaxxDetector)
 
-* Wi-Fi Deauther - See here: https://github.com/HakCat-Tech/esp8266_deauther
+* Wi-Fi Deauther - Wi-Fi scanning & attack platform for the ESP8266 by @spacehuhn (See here: https://github.com/HakCat-Tech/esp8266_deauther)
 
 **CircuitPython Code:** (S2 Nugget Only, Does Not Work On ESP8266 Nugget!)
 
