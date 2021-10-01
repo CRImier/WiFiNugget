@@ -25,6 +25,10 @@ Binaries &amp; source code for the Wi-Fi Nugget
 
 * The Wi-Fi Deauther V2.5 by @spacehuhn, modified for Nugget by @AlexLynd 
 
+**Helper Code:**
+
+* pack_unpack_test.py - Compress Bitmap Images for MicroPython by @CRImier
+
 
 
 
