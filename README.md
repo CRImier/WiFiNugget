@@ -1,19 +1,19 @@
 # WiFiNugget
 Binaries &amp; source code for the Wi-Fi Nugget
 
-Arduino Code:
+**Arduino Code:**
 
+* DeauthDetector.ino
 
-
-CircuitPython Code:
+**CircuitPython Code:**
 
 * CircuitNeopixelTest.py - CircuitPython Code to test and control the neopixel on the Wi-Fi nugget. 
 
-MicroPython Code:
+**MicroPython Code:**
 
 * MicroOLEDPixelTest.py  - Micropython test of SH1106 screen & built in neopixel (requires SH1106 library installed - https://github.com/robert-hh/SH1106)
 
-Precompiled Binaries:
+**Precompiled Binaries:**
 
 * DeauthDetector.bin - Wi-Fi deauthentication & dissisociation attack detector by @AlexLynd based on @spacehuhn's deauth detector
 
