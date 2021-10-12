@@ -4,6 +4,8 @@ Binaries &amp; source code for the Wi-Fi Nugget
 
 Documentation: https://github.com/HakCat-Tech/WiFiNugget/wiki
 
+Quickstart Setup: https://youtu.be/WAG7yCbEFtw
+
 ![Hell yeah](https://cdn.shopify.com/s/files/1/2779/8142/products/signal-2021-09-30-162945_1024x1024.jpg?v=1633047834)
 
 
