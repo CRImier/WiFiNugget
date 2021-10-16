@@ -10,6 +10,8 @@ display = sh1106.SH1106_I2C(128, 64, i2c, Pin(16), 0x3c, rotate=180)  # Define d
 display.sleep(False)  # Turn on the display
 display.fill(0)  # Erase display
 
+print("EverythingTest") # prints data to console; useful for debugging
+
 def dead():  # a very sad pic of a dead nug
     fb = framebuf.FrameBuffer(bytearray(
     b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
