@@ -4,12 +4,12 @@ Binaries & source code for the Wi-Fi Nugget
 
 MicroPython scripts:
 
-* `NeopixelTest.py` - short script for testing an attached Neopixel strip
-* `NeopixelTest_CircuitPython.py` - short script for testing an attached Neopixel strip (in CircuitPython)
-* `EverythingTest.py` - test of SH1106 screen, Neopixel and buttons
-* `Example.py` - example of a `hw.py`-based script that you can use to build your scripts from.
-* `hw.py` - Nugget hardware definition library to make coding easier; has I2C, OLED screen, Neopixel and Wemos D0-D8 pin number definitions. Need to put button debounce there for it to be complete.
-* `pack_unpack_test.py` - image compression/decompression playground&test file, for developing the compression code that makes display images consume less RAM
+* `main.py` - Example script for using the Nugget on ESP8266 hardware. Has examples for WiFi config, screen and neopixel control and button state reading. Is heavily based on `hw.py`.
+* `hw.py` - Nugget hardware definition library to make coding easier; has code for the OLED screen, buttons and the Neopixel. Also has Wemos D0-D8 pin number definitions.
+* `pack_unpack_test.py` - image compression/decompression playground&test file, for developing the compression code that makes display images consume less RAM. You don't need to store this on your Nugget.
+* `upy_tests/NeopixelTest.py` - short script for testing an attached Neopixel strip
+* `upy_tests/NeopixelTest_CircuitPython.py` - short script for testing an attached Neopixel strip (in CircuitPython)
+* `upy_tests/EverythingTest.py` - test of SH1106 screen, Neopixel and buttons
 
 MicroPython libraries used:
 * `sh1106.py` - [robert-hh's SH1106 library](https://github.com/robert-hh/SH1106/)

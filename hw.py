@@ -1,6 +1,6 @@
 from machine import Pin, I2C
 from neopixel import NeoPixel
-from time import sleep
+from time import sleep, ticks_ms, ticks_diff
 import framebuf
 import gc
 
@@ -33,12 +33,69 @@ pin = Pin(D8, Pin.OUT)   # set GPIO15 to output to drive NeoPixels
 def get_neopixels(count):
     return NeoPixel(pin, count)   # create NeoPixel driver on GPIO15 for all neopixels
 
-# Buttons
+# Button pins
 
-down  = green  = Pin(D3, Pin.IN, Pin.PULL_UP)  # down is green
-up    = red    = Pin(D6, Pin.IN, Pin.PULL_UP)  # up is red
-left  = blue   = Pin(D7, Pin.IN, Pin.PULL_UP)  # left is blue
-right = yellow = Pin(D5, Pin.IN, Pin.PULL_UP)  # right is yellow
+down_p  = Pin(D3, Pin.IN, Pin.PULL_UP)  # down is green
+up_p    = Pin(D6, Pin.IN, Pin.PULL_UP)  # up is red
+left_p  = Pin(D7, Pin.IN, Pin.PULL_UP)  # left is blue
+right_p = Pin(D5, Pin.IN, Pin.PULL_UP)  # right is yellow
+
+# Button wrapper code for usability
+
+class Buttons():
+    debounce_time = 150 # milliseconds
+
+    def __init__(self, buttons, callbacks={}, aliases={}):
+        self.b = buttons
+        self.cb = callbacks
+        self.b_al = aliases
+        self.values = {name:False for name in buttons}
+        self.debounce = {name:0 for name in buttons}
+
+    def update(self):
+        for name, button in self.b.items():
+            new = not button.value() # inverting the pin here
+            old = self.values[name]
+            if new and not old:
+                # button just pressed, recording that
+                self.values[name] = True
+                # clearing debounce timer if it's set - we only debounce on release
+                self.debounce[name] = None
+                # executing the button callback if available
+                cb = self.cb.get(name, None)
+                if callable(cb):
+                    cb()
+            elif old and not new:
+                # button is released
+                # we debounce only button release
+                # this is so that button presses are processed quicker
+                if not self.debounce[name]:
+                    # starting debounce timer
+                    self.debounce[name] = ticks_ms()
+                else:
+                    if ticks_diff(ticks_ms(), self.debounce[name]) > self.debounce_time:
+                        # button has been de-pressed for long enough
+                        # accepting and moving on
+                        self.values[name] = False
+            elif new:
+                # button still pressed
+                # just removing the debounce timer
+                # in case it's been activated by a bit of bounce on press
+                self.debounce[name] = None
+            else:
+                pass # button long-released
+
+    def __getattr__(self, attr):
+        # lets you get button value by direction - like `buttons.left`
+        if attr in self.b:
+            # return value
+            return self.values[attr]
+        # lets you get button value by color - like `buttons.blue`
+        elif attr in self.b_al:
+            return self.values[self.b_al[attr]]
+
+buttons = Buttons({"down":down_p, "up":up_p, "left":left_p, "right":right_p} ,
+                  aliases={"red":"up", "blue":"left", "yellow":"red", "green":"down"})
 
 # Screen image decompression
 
@@ -72,9 +129,9 @@ def unpack(packed_data):
 
 # Showing compressed images
 
-def show_compressed(packed_data):
+def show_compressed(packed_data, fb_width=124, fb_height=64):
     data = unpack(packed_data)
-    fb = framebuf.FrameBuffer(data, 124, 64, framebuf.MONO_VLSB)
+    fb = framebuf.FrameBuffer(data, fb_width, fb_height, framebuf.MONO_VLSB)
     lcd.fill(0)
     lcd.blit(fb, 0, 0)
     lcd.show()
