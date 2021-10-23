@@ -10,25 +10,25 @@ Quickstart Setup: https://youtu.be/WAG7yCbEFtw
 
 ## Arduino
 
-** Pre-compiled binaries **
+**Pre-compiled binaries**
 
 * `DeauthDetector.bin` - Wi-Fi deauthentication & dissociation attack detector by @AlexLynd based on @spacehuhn's deauth detector (Precompiled, flash directly with esptool)
 
 * `Nugget_Deauther.bin` - The Wi-Fi Deauther V2.5 by @spacehuhn, modified for Nugget by @AlexLynd 
 
-** Code **
+**Code**
 
-* ``DeauthDetector.ino` - Wi-Fi deauthentication & disassociation attack detector by @AlexLynd based on @spacehuhn's deauth detector (See here: https://github.com/HakCat-Tech/HaxxDetector)
+* Wi-Fi deauthentication & disassociation attack detector by @AlexLynd based on @spacehuhn's deauth detector (See here: https://github.com/HakCat-Tech/HaxxDetector)
 
 * Wi-Fi Deauther - Wi-Fi scanning & attack platform for the ESP8266 by @spacehuhn (See here: https://github.com/HakCat-Tech/esp8266_deauther)
 
 ## MicroPython
 
-** Pre-compiled binaries **
+**Pre-compiled binaries**
 
 * `wifinugget_upy_v1.bin` - MicroPython firmware that makes use out of WiFiNugget's basic hardware features (screen, buttons, Neopixel)
 
-** Code ** 
+**Code** 
 
 * `main.py` - Example script for using the Nugget on ESP8266 hardware. Has examples for WiFi config, screen and neopixel control and button state reading. Relies on `hw.py` for hardware functions, is the script that runs by default when you use the latest MicroPython binary
 * `hw.py` - Nugget hardware definition library to make coding easier; has code for the OLED screen, buttons and the Neopixel. Also has Wemos D0-D8 pin number definitions. Is included in the firmware.
@@ -37,7 +37,7 @@ Quickstart Setup: https://youtu.be/WAG7yCbEFtw
 * `upy_tests/EverythingTest.py` - test of SH1106 screen, Neopixel and buttons
 * `upy_tests/NeopixelTest_CircuitPython.py` - short script for testing an attached Neopixel strip (in CircuitPython, only works on S2 version of the Nugget, won't work on ESP8266)
 
-** Libraries used **
+**Libraries used**
 
 * `sh1106.py` - [robert-hh's SH1106 library](https://github.com/robert-hh/SH1106/)
 
