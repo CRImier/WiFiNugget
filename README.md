@@ -26,7 +26,7 @@ Quickstart Setup: https://youtu.be/WAG7yCbEFtw
 
 **Pre-compiled binaries**
 
-* `wifinugget_upy_v1.bin` - MicroPython firmware that makes use out of WiFiNugget's basic hardware features (screen, buttons, Neopixel), includes `main.py`, `hw.py` and `sh1106.py`
+* `wifinugget_upy_v2.bin` - MicroPython firmware that makes use out of WiFiNugget's basic hardware features (screen, buttons, Neopixel), includes `main.py`, `hw.py` and `sh1106.py`. Hold the right button during boot to enable AP mode!
 * `wifinugget_generic_upy_v1.17.bin` - generic MicroPython firmware that was verified to work on WiFiNugget with ESP8266, build 20210902-v1.17
 
 **Code** 
